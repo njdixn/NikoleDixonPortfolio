@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --green-deep: #195342;
+    --green-mid: #34816a;
+    --green-light: #a3d4c5;
+    --plum: #1C0920;
+    --plum-mid: #483949;
+    --cream: #f7f5f2;
+    --cream-light: #fcfbf9;
+    --ink: #2b2025;
+    --ink-muted: #5e595b;
+    --ink-faint: #9c979a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: var(--cream);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #ede9e2;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #195342;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #34816a;
+  }
+}
+
+@layer utilities {
+  .font-serif-display {
+    font-family: 'sovba', sans-serif;
+  }
+
+  .font-mono-code {
+    font-family: 'DM Mono', monospace;
+  }
+
+  /* Crochet / artisan grid motif background */
+  .bg-grid-pattern {
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, rgba(25, 83, 66, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(25, 83, 66, 0.05) 1px, transparent 1px);
+  }
+
+  .bg-grid-pattern-dark {
+    background-size: 28px 28px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  }
+
+  .art-gradient {
+    background: linear-gradient(150deg, #1C0920 0%, #195342 55%, #2b5c4a 100%);
+  }
+
+  .art-border-subtle {
+    border-color: rgba(25, 83, 66, 0.14);
+  }
+}
+
+/* Base button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #195342;
+  color: #ffffff;
+  padding: 0.65rem 1.6rem;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(25, 83, 66, 0.18);
+}
+.btn-primary:hover {
+  background-color: #226a55;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(25, 83, 66, 0.28);
+}
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1.5px solid #195342;
+  color: #195342;
+  background-color: transparent;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-outline:hover {
+  background-color: #195342;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-light-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  padding: 0.65rem 1.6rem;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.btn-light-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateY(-1px);
+}
+

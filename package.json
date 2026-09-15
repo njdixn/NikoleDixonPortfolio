@@ -1,0 +1,12 @@
+{
+  "name": "nikole-dixon-portfolio-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix portfolio run dev",
+    "build": "npm --prefix portfolio run build",
+    "typecheck": "npm --prefix portfolio run typecheck",
+    "preview": "npm --prefix portfolio run preview",
+    "deploy": "npm --prefix portfolio run deploy"
+  }
+}
+
